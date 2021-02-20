@@ -86,14 +86,18 @@ struct DetailView: View {
                                 .frame(width: gr.size.width)
                             
                         }.frame(width: gr.size.width)
+                        
+                        
                     }
                     
                     
                     
                 }.edgesIgnoringSafeArea([.top, .bottom])
                 
-                
-
+                VStack{
+                    Spacer()
+                    OptionsBar()
+                }
             }
         }
     }
