@@ -70,7 +70,7 @@ struct HomeView: View {
                                 CardView(user: user, onRemove: {
                                     removedUser in
                                     self.users.removeAll { $0.id == removedUser.id }
-                                }).animation(.spring())
+                                }).animation(.interactiveSpring())
                                     .frame(width: self.getCardwidth(gr, id: user.id))
                                     .offset(x: 0, y: self.getCardOffset(gr, id: user.id))
                             }
