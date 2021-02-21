@@ -79,13 +79,16 @@ struct DetailView: View {
                             
                             HStack {
                                 InterestTag(title: "Travel")
-                                InterestTag(title: "Travel")
-                                InterestTag(title: "Travel")
+                                InterestTag(title: "Coding")
+                                InterestTag(title: "Cooking")
+                                InterestTag(title: "Binge Drinking")
+                                InterestTag(title: "Long Walk")
+                                InterestTag(title: "Gym")
                                 
                             }.padding()
                                 .frame(width: gr.size.width)
                             
-                        }.frame(width: gr.size.width)
+                        }.frame(maxWidth: .infinity, alignment: Alignment(horizontal: HorizontalAlignment.leading, vertical: .center))
                         
                         
                     }
