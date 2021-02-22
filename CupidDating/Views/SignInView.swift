@@ -52,12 +52,16 @@ struct SignInView: View {
                     Button(action: {
                         
                     }) {
-                        Text("SIGN IN")
-                            .foregroundColor(.white)
-                            .font(.system(size: 18, weight: .semibold, design: .default))
-                            .padding()
-                            .frame(width: gr.size.width*0.8)
-                            .overlay(RoundedRectangle(cornerRadius: 30).stroke(Color.white, lineWidth: 1))
+                        NavigationLink(destination: HomeView().navigationBarTitle("").navigationBarHidden(true)) {
+                            
+                            Text("SIGN IN")
+                                .foregroundColor(.white)
+                                .font(.system(size: 18, weight: .semibold, design: .default))
+                                .padding()
+                                .frame(width: gr.size.width*0.8)
+                                .overlay(RoundedRectangle(cornerRadius: 30).stroke(Color.white, lineWidth: 1))
+                        }
+                        
                         
                     }
                     
@@ -65,9 +69,11 @@ struct SignInView: View {
                         Text("Don't have an account?")
                             .foregroundColor(.white)
                             .font(.system(size: 16, weight: .light, design: .default))
+                        NavigationLink(destination: CreateAccountView().navigationBarTitle("").navigationBarHidden(true)) {
+                            Text("Create Account").foregroundColor(.white)
+                                .font(.system(size: 16, weight: .medium, design: .default))
+                        }
                         
-                        Text("Create Account").foregroundColor(.white)
-                            .font(.system(size: 16, weight: .medium, design: .default))
                     }.padding()
                     Spacer()
                     Spacer()

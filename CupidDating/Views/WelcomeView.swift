@@ -36,14 +36,19 @@ struct WelcomeView: View {
                                 .foregroundColor(.white)
                                 .font(.system(size: 16, weight: .medium, design: .default))
                             
-                            Text("CREATE ACCOUNT")
-                                .foregroundColor(.gray)
-                                .font(.system(size: 18, weight: .semibold, design: .default))
-                                .frame(width: geometry.size.width*0.8, height: 60)
-                                .background(Color.white)
-                                .cornerRadius(30)
+                            NavigationLink(destination: CreateAccountView().navigationBarTitle("").navigationBarHidden(true)) {
+                                Text("CREATE ACCOUNT")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 18, weight: .semibold, design: .default))
+                                    .frame(width: geometry.size.width*0.8, height: 60)
+                                    .background(Color.white)
+                                    .cornerRadius(30)
+
+                            }
                             
-                            NavigationLink(destination: HomeView().navigationBarTitle("")
+                            
+                            
+                            NavigationLink(destination: SignInView().navigationBarTitle("")
                             .navigationBarHidden(true)) {
                                 Text("SIGN IN")
                                     .foregroundColor(.white)
