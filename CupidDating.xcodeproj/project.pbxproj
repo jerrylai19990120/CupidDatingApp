@@ -32,6 +32,8 @@
 		92D312A725E5941400EFFE0A /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D312A625E5941400EFFE0A /* ChatView.swift */; };
 		92D312A925E5A7A800EFFE0A /* ReceiveMessageBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D312A825E5A7A800EFFE0A /* ReceiveMessageBox.swift */; };
 		92D312AB25E5A7B900EFFE0A /* SendMessageBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D312AA25E5A7B900EFFE0A /* SendMessageBox.swift */; };
+		92D312AD25E5B47400EFFE0A /* PreviewSwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D312AC25E5B47400EFFE0A /* PreviewSwipeCard.swift */; };
+		92D312AF25E5B8B800EFFE0A /* SeeWhoLikedMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D312AE25E5B8B800EFFE0A /* SeeWhoLikedMeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		92D312A625E5941400EFFE0A /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		92D312A825E5A7A800EFFE0A /* ReceiveMessageBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveMessageBox.swift; sourceTree = "<group>"; };
 		92D312AA25E5A7B900EFFE0A /* SendMessageBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageBox.swift; sourceTree = "<group>"; };
+		92D312AC25E5B47400EFFE0A /* PreviewSwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSwipeCard.swift; sourceTree = "<group>"; };
+		92D312AE25E5B8B800EFFE0A /* SeeWhoLikedMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeWhoLikedMeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 				92D3129625E4663400EFFE0A /* MatchesView.swift */,
 				92D3129C25E47A0C00EFFE0A /* ProfileView.swift */,
 				92D312A625E5941400EFFE0A /* ChatView.swift */,
+				92D312AE25E5B8B800EFFE0A /* SeeWhoLikedMeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 				92D312A425E56C1D00EFFE0A /* SwitcherView.swift */,
 				92D312A825E5A7A800EFFE0A /* ReceiveMessageBox.swift */,
 				92D312AA25E5A7B900EFFE0A /* SendMessageBox.swift */,
+				92D312AC25E5B47400EFFE0A /* PreviewSwipeCard.swift */,
 			);
 			path = ComponentViews;
 			sourceTree = "<group>";
@@ -246,7 +252,9 @@
 				929EF01425E1F68B0015AB71 /* User.swift in Sources */,
 				92D3129925E469A100EFFE0A /* MatchIcon.swift in Sources */,
 				92D3129F25E480BA00EFFE0A /* SettingsButton.swift in Sources */,
+				92D312AF25E5B8B800EFFE0A /* SeeWhoLikedMeView.swift in Sources */,
 				929EF00925E1B13A0015AB71 /* DetailView.swift in Sources */,
+				92D312AD25E5B47400EFFE0A /* PreviewSwipeCard.swift in Sources */,
 				929EEFF725E187DD0015AB71 /* SceneDelegate.swift in Sources */,
 				929EEFF925E187DD0015AB71 /* HomeView.swift in Sources */,
 			);
@@ -385,7 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.8;
+				CURRENT_PROJECT_VERSION = 1.0.10;
 				DEVELOPMENT_ASSET_PATHS = "\"CupidDating/Preview Content\"";
 				DEVELOPMENT_TEAM = 8L83CZ8839;
 				ENABLE_PREVIEWS = YES;
@@ -406,7 +414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.8;
+				CURRENT_PROJECT_VERSION = 1.0.10;
 				DEVELOPMENT_ASSET_PATHS = "\"CupidDating/Preview Content\"";
 				DEVELOPMENT_TEAM = 8L83CZ8839;
 				ENABLE_PREVIEWS = YES;

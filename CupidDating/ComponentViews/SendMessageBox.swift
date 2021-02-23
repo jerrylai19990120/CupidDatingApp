@@ -21,7 +21,7 @@ struct SendMessageBox: View {
                     .foregroundColor(.white)
                     .padding()
                     .background(Color(red: 18/255, green: 199/255, blue: 253/255))
-                .cornerRadius(30).frame(width: 330)
+                .cornerRadius(30).frame(width: 260).padding(.trailing, 18)
         }
     }
 }

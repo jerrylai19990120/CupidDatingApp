@@ -23,10 +23,11 @@ struct ReceiveMessageBox: View {
             Text("The simplest alignment option is to use the alignment parameter of a frame() modifier. Remember, a text view always uses the exact width and height required to show its text, but when we")
                     .font(.system(size: 22, weight: .medium, design: .default))
                 .padding()
-                .frame(width: 300)
+                .frame(width: 260)
                 .background(Color(red: 231/255, green: 231/255, blue: 231/255))
                 .cornerRadius(30)
-        }
+            Spacer()
+        }.padding(.leading, 10)
     }
 }
 

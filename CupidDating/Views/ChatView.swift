@@ -58,7 +58,7 @@ struct ChatView: View {
                             SendMessageBox()
                             ReceiveMessageBox()
                             SendMessageBox()
-                            }.frame(width: gr.size.width)
+                        }.frame(width: gr.size.width)
                     }
                     
                     HStack(spacing: 0) {
