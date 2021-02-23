@@ -31,35 +31,41 @@ struct CardView: View {
             ZStack {
                 GeometryReader {
                     gr in
-                    //NavigationLink(destination: DetailView().navigationBarTitle("".navigationBarHidden(true)) {
                     
                     Image("\(self.user.imageName)").resizable().renderingMode(.original).aspectRatio(contentMode: .fill)
                         .frame(width: gr.size.width*0.9, height: gr.size.height)
-                        .cornerRadius(20)
+                        .cornerRadius(10)
                         .shadow(color: .gray, radius: 6)
-                    //}
+                    
                     
                     
                 }
                 
                 GeometryReader { gr in
-                    RoundedRectangle(cornerRadius: 30)
-                        .fill(Color.white)
-                        .opacity(0.5)
-                        .frame(height: gr.size.height*0.2)
-                        .offset(x: gr.size.width*0.1, y: gr.size.height*0.7)
                     
-                    
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text("\(self.user.description)")
-                            .font(.system(size: 28, weight: .semibold, design: .default))
-                            .foregroundColor(Color(red: 79/255, green: 76/255, blue: 111/255))
-                        Text("\(self.user.occupation)")
-                            .font(.system(size: 18, weight: .semibold, design: .default))
-                            .foregroundColor(Color.gray)
-                            .frame(width: gr.size.width*0.7)
+                    HStack {
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text("\(self.user.description)")
+                                .font(.system(size: 28, weight: .semibold, design: .default))
+                                .foregroundColor(.white)
+                            Text("\(self.user.occupation)")
+                                .font(.system(size: 18, weight: .semibold, design: .default))
+                                .foregroundColor(Color.white)
+                            
+                            
+                        }
+                        Spacer()
                         
-                    }.padding().frame(width: gr.size.width).offset(y: gr.size.height*0.72)
+                        NavigationLink(destination: DetailView().navigationBarTitle("").navigationBarHidden(true)) {
+                            Image(systemName: "exclamationmark.circle.fill").resizable().aspectRatio(contentMode: .fit).foregroundColor(.white)
+                                .frame(width: 30)
+                        }
+                        
+                        
+                    }.padding()
+                    .padding([.leading, .trailing], gr.size.width*0.08)
+                        .offset(y: gr.size.height*0.36)
+                    
                 }
                 
                 

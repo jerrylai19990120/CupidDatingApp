@@ -51,28 +51,26 @@ struct HomeView: View {
                                     .frame(width: 28, height: 28)
                                     .clipped()
                                     .cornerRadius(40)
-                                    .foregroundColor(Color(red: 245/255, green: 39/255, blue: 119/255))
+                                    .foregroundColor(Color(red: 218/255, green: 223/255, blue: 229/255))
 
                             }
                             
                             Spacer()
-                            Text("For You")
-                                .font(.system(size: 23, weight: .semibold, design: .default))
-                                .foregroundColor(Color(red: 245/255, green: 39/255, blue: 119/255))
+                            SwitcherView()
                             Spacer()
                             
                             NavigationLink(destination: MatchesView().navigationBarTitle("").navigationBarHidden(true)) {
                                 Image(systemName: "bubble.left.and.bubble.right.fill")
                                     .resizable().aspectRatio(contentMode: .fit)
                                     .frame(width: 28, height: 28)
-                                    .foregroundColor(Color(red: 245/255, green: 39/255, blue: 119/255))
+                                    .foregroundColor(Color(red: 218/255, green: 223/255, blue: 229/255))
                             }
                             
                             
                         }.padding()
                         
                         ZStack {
-                            ForEach(self.users.filter {$0.id > (self.maxID-4)}, id: \.self) { user in
+                            ForEach(self.users.filter {$0.id > (self.maxID-3)}, id: \.self) { user in
                                 
                                 
                                 CardView(user: user, onRemove: {
@@ -84,7 +82,7 @@ struct HomeView: View {
                             }
                         }
                         
-                        OptionsBar()
+                        OptionsBar().frame(height: gr.size.height*0.12)
                         
                     }
                     
