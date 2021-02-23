@@ -70,6 +70,7 @@ struct SignInView: View {
                             .foregroundColor(.white)
                             .font(.system(size: 16, weight: .light, design: .default))
                         NavigationLink(destination: CreateAccountView().navigationBarTitle("").navigationBarHidden(true)) {
+
                             Text("Create Account").foregroundColor(.white)
                                 .font(.system(size: 16, weight: .medium, design: .default))
                         }
