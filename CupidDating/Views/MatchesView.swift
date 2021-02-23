@@ -18,13 +18,13 @@ struct MatchesView: View {
                     NavigationLink(destination: HomeView().navigationBarTitle("").navigationBarHidden(true)) {
                         Image(systemName:"person.3.fill").resizable().aspectRatio(contentMode: .fit)
                             .foregroundColor(Color(red: 218/255, green: 223/255, blue: 229/255))
-                            .frame(width: gr.size.width*0.1)
+                            .frame(width: gr.size.width*0.08)
                     }
                     
                     Spacer()
                     Image(systemName:"bubble.left.and.bubble.right.fill").resizable().aspectRatio(contentMode: .fit)
                         .foregroundColor(Color(red: 245/255, green: 39/255, blue: 119/255))
-                        .frame(width: gr.size.width*0.11)
+                        .frame(width: gr.size.width*0.09)
                     Spacer()
                     }.padding()
                 .frame(width: gr.size.width)

@@ -10,7 +10,12 @@ import SwiftUI
 
 struct SettingsButton: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image(systemName: "gear").resizable().aspectRatio(contentMode: .fit).padding(.all, 20).foregroundColor(.gray).frame(width: 76, height: 76).background(Color(red: 245/255, green: 247/255, blue: 251/255)).cornerRadius(76)
+            
+            Text("SETTINGS").foregroundColor(.gray)
+            .font(.system(size: 16, weight: .semibold, design: .rounded))
+        }
     }
 }
 
