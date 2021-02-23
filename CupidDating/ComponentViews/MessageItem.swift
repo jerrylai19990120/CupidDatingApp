@@ -12,19 +12,22 @@ struct MessageItem: View {
     var body: some View {
         GeometryReader {
             gr in
-            HStack {
-                Image("examplePic").resizable().aspectRatio(contentMode: .fill)
-                    .clipped()
-                    .frame(width: 66, height: 66)
-                    .cornerRadius(66)
-                
-                VStack(alignment: .leading, spacing: 6) {
-                    Text("Sabrina")
-                        .foregroundColor(.black)
-                        .font(.system(size: 16, weight: .semibold, design: .rounded))
-                    Text("This is the best date I had in a while, I would love to go on another one.").foregroundColor(.gray).font(.system(size: 16, weight: .medium, design: .rounded)).lineLimit(1)
-                }
+            NavigationLink(destination: ChatView().navigationBarTitle("").navigationBarHidden(true)) {
+                HStack {
+                    Image("examplePic").resizable().renderingMode(.original).aspectRatio(contentMode: .fill)
+                        .clipped()
+                        .frame(width: 66, height: 66)
+                        .cornerRadius(66)
+                    
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Sabrina")
+                            .foregroundColor(.black)
+                            .font(.system(size: 16, weight: .semibold, design: .rounded))
+                        Text("This is the best date I had in a while, I would love to go on another one.").foregroundColor(.gray).font(.system(size: 16, weight: .medium, design: .rounded)).lineLimit(1)
+                    }
                 }.frame(width: gr.size.width)
+            }
+            
         
         }.frame(height: 80)
     }

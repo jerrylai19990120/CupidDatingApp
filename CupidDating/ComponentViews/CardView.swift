@@ -44,13 +44,35 @@ struct CardView: View {
                 GeometryReader { gr in
                     
                     HStack {
-                        VStack(alignment: .leading, spacing: 10) {
+                        VStack(alignment: .leading, spacing: 0) {
                             Text("\(self.user.description)")
                                 .font(.system(size: 28, weight: .semibold, design: .default))
                                 .foregroundColor(.white)
-                            Text("\(self.user.occupation)")
-                                .font(.system(size: 18, weight: .semibold, design: .default))
-                                .foregroundColor(Color.white)
+                            
+                            HStack {
+                                Image(systemName: "briefcase")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: gr.size.width*0.05)
+                                    .foregroundColor(.white)
+                                    .font(Font.title.weight(.semibold))
+                                Text("\(self.user.occupation)")
+                                    .font(.system(size: 18, weight: .semibold, design: .default))
+                                    .foregroundColor(Color.white)
+                            }
+                            
+                            HStack {
+                                Image(systemName: "mappin.and.ellipse")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: gr.size.width*0.05)
+                                    .foregroundColor(.white)
+                                    .font(Font.title.weight(.semibold))
+                                
+                                Text("18km away")
+                                    .font(.system(size: 18, weight: .semibold, design: .default))
+                                    .foregroundColor(Color.white)
+                            }
                             
                             
                         }

@@ -29,6 +29,9 @@
 		92D312A125E480D100EFFE0A /* EditInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D312A025E480D100EFFE0A /* EditInfoButton.swift */; };
 		92D312A325E480F500EFFE0A /* AddMediaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D312A225E480F500EFFE0A /* AddMediaButton.swift */; };
 		92D312A525E56C1D00EFFE0A /* SwitcherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D312A425E56C1D00EFFE0A /* SwitcherView.swift */; };
+		92D312A725E5941400EFFE0A /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D312A625E5941400EFFE0A /* ChatView.swift */; };
+		92D312A925E5A7A800EFFE0A /* ReceiveMessageBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D312A825E5A7A800EFFE0A /* ReceiveMessageBox.swift */; };
+		92D312AB25E5A7B900EFFE0A /* SendMessageBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D312AA25E5A7B900EFFE0A /* SendMessageBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		92D312A025E480D100EFFE0A /* EditInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoButton.swift; sourceTree = "<group>"; };
 		92D312A225E480F500EFFE0A /* AddMediaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMediaButton.swift; sourceTree = "<group>"; };
 		92D312A425E56C1D00EFFE0A /* SwitcherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitcherView.swift; sourceTree = "<group>"; };
+		92D312A625E5941400EFFE0A /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		92D312A825E5A7A800EFFE0A /* ReceiveMessageBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveMessageBox.swift; sourceTree = "<group>"; };
+		92D312AA25E5A7B900EFFE0A /* SendMessageBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 				929EF01925E32AB10015AB71 /* CreateAccountView.swift */,
 				92D3129625E4663400EFFE0A /* MatchesView.swift */,
 				92D3129C25E47A0C00EFFE0A /* ProfileView.swift */,
+				92D312A625E5941400EFFE0A /* ChatView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,6 +142,8 @@
 				92D312A025E480D100EFFE0A /* EditInfoButton.swift */,
 				92D312A225E480F500EFFE0A /* AddMediaButton.swift */,
 				92D312A425E56C1D00EFFE0A /* SwitcherView.swift */,
+				92D312A825E5A7A800EFFE0A /* ReceiveMessageBox.swift */,
+				92D312AA25E5A7B900EFFE0A /* SendMessageBox.swift */,
 			);
 			path = ComponentViews;
 			sourceTree = "<group>";
@@ -225,12 +234,15 @@
 				92D3129B25E46BD000EFFE0A /* MessageItem.swift in Sources */,
 				929EF00F25E1C2830015AB71 /* OptionsBar.swift in Sources */,
 				929EEFF525E187DD0015AB71 /* AppDelegate.swift in Sources */,
+				92D312AB25E5A7B900EFFE0A /* SendMessageBox.swift in Sources */,
 				92D3129725E4663400EFFE0A /* MatchesView.swift in Sources */,
 				929EF00D25E1B52D0015AB71 /* InterestTag.swift in Sources */,
 				92D3129D25E47A0C00EFFE0A /* ProfileView.swift in Sources */,
 				929EF01825E32AA30015AB71 /* SignInView.swift in Sources */,
 				92D312A325E480F500EFFE0A /* AddMediaButton.swift in Sources */,
+				92D312A725E5941400EFFE0A /* ChatView.swift in Sources */,
 				929EF01625E30FB60015AB71 /* WelcomeView.swift in Sources */,
+				92D312A925E5A7A800EFFE0A /* ReceiveMessageBox.swift in Sources */,
 				929EF01425E1F68B0015AB71 /* User.swift in Sources */,
 				92D3129925E469A100EFFE0A /* MatchIcon.swift in Sources */,
 				92D3129F25E480BA00EFFE0A /* SettingsButton.swift in Sources */,

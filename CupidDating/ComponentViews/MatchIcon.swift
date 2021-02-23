@@ -10,14 +10,18 @@ import SwiftUI
 
 struct MatchIcon: View {
     var body: some View {
-        VStack {
-            Image("examplePic").resizable().aspectRatio(contentMode: .fill)
-                .clipped()
-                .frame(width: 76, height: 76)
-                .cornerRadius(76)
-            Text("Sarbina").foregroundColor(.black)
-                .font(.system(size: 16, weight: .semibold, design: .rounded))
+        
+        NavigationLink(destination: ChatView().navigationBarTitle("").navigationBarHidden(true)) {
+            VStack {
+                Image("examplePic").resizable().renderingMode(.original).aspectRatio(contentMode: .fill)
+                    .clipped()
+                    .frame(width: 76, height: 76)
+                    .cornerRadius(76)
+                Text("Sarbina").foregroundColor(.black)
+                    .font(.system(size: 16, weight: .semibold, design: .rounded))
+            }
         }
+        
     }
 }
 

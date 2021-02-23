@@ -59,9 +59,6 @@ struct MatchesView: View {
                             MessageItem()
                             MessageItem()
                             MessageItem()
-                            MessageItem()
-                            MessageItem()
-                            MessageItem()
                         }
                     }.padding(.top)
                     
