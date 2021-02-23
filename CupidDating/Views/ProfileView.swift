@@ -70,7 +70,7 @@ struct ProfileView: View {
                         Text("MY CUPID GOLD").foregroundColor(Color(red: 245/255, green: 39/255, blue: 119/255))
                             .frame(width: gr.size.width*0.7)
                             .font(.system(size: 18, weight: .semibold, design: .rounded)).padding().background(Color.white).cornerRadius(30).shadow(color: .gray, radius: 3)
-                    }
+                    }.padding(.bottom, gr.size.height*0.06)
                     
                     
                     

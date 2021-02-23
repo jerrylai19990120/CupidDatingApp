@@ -20,37 +20,30 @@ struct DetailView: View {
                             Image("examplePic").resizable().clipped()
                                 .frame(maxHeight: 300)
                                 .frame(width: gr.size.width).aspectRatio(contentMode: .fit)
-                            VStack {
-                                Spacer()
-                                NavigationLink(destination: HomeView().navigationBarTitle("").navigationBarHidden(true)) {
-                                    Image(systemName: "arrow.left").resizable()
-                                        .aspectRatio(contentMode: .fit).foregroundColor(Color(red: 245/255, green: 39/255, blue: 119/255))
-                                        .frame(width: 28, height: 28)
-                                        .padding()
-
-                                }
-                                
-                                Spacer()
-                                Spacer()
-                                Spacer()
-                                Spacer()
-                                Spacer()
-                                Spacer()
-                                Spacer()
-                                Spacer()
-                            }
                             
                             
                         }
                         
                         
-                            
-                        
                         VStack(alignment: .leading, spacing: 6) {
                             
-                            Text("Sabrina, 23")
-                                .font(.system(size: 26, weight: .semibold, design: .default))
-                                .foregroundColor(Color(red: 79/255, green: 76/255, blue: 111/255))
+                            HStack {
+                                Text("Sabrina, 23")
+                                    .font(.system(size: 26, weight: .semibold, design: .default))
+                                    .foregroundColor(Color(red: 79/255, green: 76/255, blue: 111/255))
+                                Spacer()
+                                NavigationLink(destination: HomeView().navigationBarTitle("").navigationBarHidden(true)) {
+                                    Image(systemName: "arrow.down").resizable().aspectRatio(contentMode: .fit).padding()
+                                        .frame(width: gr.size.width*0.12, height: gr.size.width*0.12)
+                                        .background(Color(red: 245/255, green: 39/255, blue: 119/255))
+                                        .foregroundColor(.white)
+                                        .cornerRadius(gr.size.width*0.12)
+                                        .font(Font.title.weight(.bold))
+                                        
+                                }.offset(x: -18, y: -gr.size.height*0.06)
+                                
+                            }
+                           
                             Text("Fashion Designer at Hermes Head quarter")
                                 .font(.system(size: 18, weight: .semibold, design: .default))
                                 .foregroundColor(Color.gray)
@@ -58,7 +51,7 @@ struct DetailView: View {
                             Text("18km away")
                                 .font(.system(size: 18, weight: .semibold, design: .default))
                                 .foregroundColor(Color.gray)
-                        }.padding()
+                        }.padding().padding(.top, 0)
                         
                         VStack(alignment: .leading) {
                             Text("ABOUT ME")
@@ -86,7 +79,7 @@ struct DetailView: View {
                                 InterestTag(title: "Gym")
                                 
                             }.padding()
-                                .frame(width: gr.size.width)
+                            .frame(width: gr.size.width)
                             
                         }.frame(maxWidth: .infinity, alignment: Alignment(horizontal: HorizontalAlignment.leading, vertical: .center))
                         
@@ -99,8 +92,8 @@ struct DetailView: View {
                 
                 VStack{
                     Spacer()
-                    OptionsBar()
-                }
+                    OptionsBar().frame(height: gr.size.height*0.12)
+                }.padding(.bottom, gr.size.height*0.02)
             }
         }
     }
