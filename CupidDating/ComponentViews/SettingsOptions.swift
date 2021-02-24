@@ -13,8 +13,14 @@ struct SettingsOptions: View {
     var gr: GeometryProxy
     
     @State var isOn: Bool = true
+    
+    @State var isOnCupid: Bool = true
+    
     @State var distanceRange:Double = 20
-    @State var ageRange:Double = 26
+    
+    @State var maxAgeRange:Double = 40
+    
+    @State var minAgeRange: Double = 18
     
     var body: some View {
         
@@ -47,7 +53,7 @@ struct SettingsOptions: View {
                         
                     }
                     
-                    Slider(value: $distanceRange, in: 0...80)
+                    Slider(value: $distanceRange, in: 0...80).accentColor(Color(red: 245/255, green: 39/255, blue: 119/255))
                 }
                 
                 VStack {
@@ -55,12 +61,25 @@ struct SettingsOptions: View {
                         Text("Age Range")
                             .font(.system(size: 20, weight: .regular, design: .default))
                         Spacer()
-                        Text("\(Int(self.ageRange))")
+                        Text("\(Int(self.minAgeRange))-\(Int(self.maxAgeRange))")
                             .font(.system(size: 20, weight: .regular, design: .default)).foregroundColor(.gray)
 
                         
                     }
-                    Slider(value: $distanceRange, in: 18...60)
+                    
+                    HStack {
+                        Text("Min")
+                        .font(.system(size: 20, weight: .regular, design: .default)).foregroundColor(.gray)
+                        Slider(value: $minAgeRange, in: 18...38).accentColor(Color(red: 245/255, green: 39/255, blue: 119/255))
+                    }
+                    
+                    HStack {
+                        Text("Max")
+                        .font(.system(size: 20, weight: .regular, design: .default)).foregroundColor(.gray)
+                        Slider(value: $maxAgeRange, in: 39...60).accentColor(Color(red: 245/255, green: 39/255, blue: 119/255))
+                    }
+                    
+                    
                 }
                
                 
@@ -70,19 +89,20 @@ struct SettingsOptions: View {
                 Toggle(isOn: self.$isOn) {
                     Text("Men")
                     .font(.system(size: 20, weight: .regular, design: .default))
-                }.padding([.top, .bottom])
+                    }.toggleStyle(RedToggleStyle(title: "Men"))
+                .padding([.top, .bottom])
                 
                 Toggle(isOn: self.$isOn) {
                     Text("Women")
                     .font(.system(size: 20, weight: .regular, design: .default))
-                }.padding([.top, .bottom])
+                    }.padding([.top, .bottom]).toggleStyle(RedToggleStyle(title: "Women"))
             }
             
             Section(header: Text("")) {
-                Toggle(isOn: self.$isOn) {
+                Toggle(isOn: self.$isOnCupid) {
                     Text("Show me on Cupid")
                     .font(.system(size: 20, weight: .regular, design: .default))
-                }.padding([.top, .bottom])
+                    }.padding([.top, .bottom]).toggleStyle(RedToggleStyle(title: "Show me on Cupid"))
             }
             
             
@@ -160,5 +180,30 @@ struct SectionHeader: View {
     var body: some View {
         Text("\(header)").foregroundColor(Color(red: 245/255, green: 39/255, blue: 119/255))
             .font(.system(size: 13, weight: .semibold, design: .default))
+    }
+}
+
+struct RedToggleStyle: ToggleStyle {
+    
+    var title: String = ""
+    
+    func makeBody(configuration: Configuration) -> some View {
+        HStack {
+            Text("\(title)")
+            .font(.system(size: 20, weight: .regular, design: .default))
+            Spacer()
+            Rectangle()
+                .foregroundColor(configuration.isOn ? Color(red: 245/255, green: 39/255, blue: 119/255) : .gray)
+                .frame(width: 54, height: 30, alignment: .center)
+                .overlay(
+                    Circle()
+                        .foregroundColor(.white)
+                        .offset(x: configuration.isOn ? 12 : -12, y: 0)
+                        .shadow(color: .gray, radius: 6)
+                        .animation(Animation.linear(duration: 0.1))
+                        
+                ).cornerRadius(18)
+                .onTapGesture { configuration.isOn.toggle() }
+        }
     }
 }
