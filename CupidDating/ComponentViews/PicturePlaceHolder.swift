@@ -19,11 +19,12 @@ struct PicturePlaceHolder: View {
                 RoundedRectangle(cornerRadius: 10)
                     .strokeBorder(
                         style: StrokeStyle(lineWidth: 2, dash: [15])
-                ).foregroundColor(.gray)
-                    .background(Color(red: 234/255, green: 237/255, blue: 242/255))
+                    )
+                    .foregroundColor(Color(red: 225/255, green: 228/255, blue: 233/255))
+                    .background(RoundedRectangle(cornerRadius: 10).fill(Color(red: 234/255, green: 237/255, blue: 242/255)))
                 
                 Text("\(self.index)").foregroundColor(.white)
-                    .font(.system(size: 18, weight: .bold, design: .default))
+                    .font(.system(size: 18, weight: .bold, design: .default)).offset(x: 10, y: 10)
                 
                 Image(systemName: "plus").resizable().aspectRatio(contentMode: .fit)
                     .padding(.all, 8)

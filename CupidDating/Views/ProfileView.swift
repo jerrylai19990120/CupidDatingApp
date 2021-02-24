@@ -45,11 +45,18 @@ struct ProfileView: View {
                         Image("examplePic").resizable().aspectRatio(contentMode: .fill).frame(width: gr.size.width*0.36, height: gr.size.width*0.36).cornerRadius(gr.size.width*0.36)
                         
                         HStack {
-                            SettingsButton()
+                            NavigationLink(destination: SettingsView().navigationBarTitle("").navigationBarHidden(true)) {
+                               SettingsButton()
+                            }
+                        
                             Spacer()
                             AddMediaButton().offset(y: 30)
                             Spacer()
-                            EditInfoButton()
+                            
+                            NavigationLink(destination: EditInfoView().navigationBarTitle("").navigationBarHidden(true)) {
+                                EditInfoButton()
+                            }
+                            
                         }.padding()
                             .padding([.leading, .trailing], 20)
                     }

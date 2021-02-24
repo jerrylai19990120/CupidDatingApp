@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		928B677E25E6C69400FFFDF5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B677D25E6C69400FFFDF5 /* SettingsView.swift */; };
+		928B678025E6C81E00FFFDF5 /* SettingsOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B677F25E6C81E00FFFDF5 /* SettingsOptions.swift */; };
 		929EEFF525E187DD0015AB71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EEFF425E187DD0015AB71 /* AppDelegate.swift */; };
 		929EEFF725E187DD0015AB71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EEFF625E187DD0015AB71 /* SceneDelegate.swift */; };
 		929EEFF925E187DD0015AB71 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929EEFF825E187DD0015AB71 /* HomeView.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		928B677D25E6C69400FFFDF5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		928B677F25E6C81E00FFFDF5 /* SettingsOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptions.swift; sourceTree = "<group>"; };
 		929EEFF125E187DD0015AB71 /* Cupid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cupid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929EEFF425E187DD0015AB71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		929EEFF625E187DD0015AB71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 				92D312A625E5941400EFFE0A /* ChatView.swift */,
 				92D312AE25E5B8B800EFFE0A /* SeeWhoLikedMeView.swift */,
 				92F42C7E25E6B23600752723 /* EditInfoView.swift */,
+				928B677D25E6C69400FFFDF5 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 				92F42C7C25E5DF0100752723 /* EmptyChatView.swift */,
 				92F42C8025E6B29F00752723 /* PictureGrid.swift */,
 				92F42C8225E6B5BE00752723 /* PicturePlaceHolder.swift */,
+				928B677F25E6C81E00FFFDF5 /* SettingsOptions.swift */,
 			);
 			path = ComponentViews;
 			sourceTree = "<group>";
@@ -263,6 +269,7 @@
 				92D312A325E480F500EFFE0A /* AddMediaButton.swift in Sources */,
 				92D312A725E5941400EFFE0A /* ChatView.swift in Sources */,
 				929EF01625E30FB60015AB71 /* WelcomeView.swift in Sources */,
+				928B677E25E6C69400FFFDF5 /* SettingsView.swift in Sources */,
 				92D312A925E5A7A800EFFE0A /* ReceiveMessageBox.swift in Sources */,
 				929EF01425E1F68B0015AB71 /* User.swift in Sources */,
 				92D3129925E469A100EFFE0A /* MatchIcon.swift in Sources */,
@@ -273,6 +280,7 @@
 				929EEFF725E187DD0015AB71 /* SceneDelegate.swift in Sources */,
 				92F42C7F25E6B23600752723 /* EditInfoView.swift in Sources */,
 				929EEFF925E187DD0015AB71 /* HomeView.swift in Sources */,
+				928B678025E6C81E00FFFDF5 /* SettingsOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
