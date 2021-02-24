@@ -19,6 +19,8 @@ struct User: Hashable, CustomStringConvertible {
     
     let occupation: String
     
+    let distance: Int
+    
     var description: String {
         return "\(firstName) \(lastName), \(age)"
     }

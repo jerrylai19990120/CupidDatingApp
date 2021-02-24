@@ -9,6 +9,20 @@
 import SwiftUI
 
 struct SeeWhoLikedMeView: View {
+    
+    @State var users: [User] = [
+        User(id: 0, firstName: "Sabrina", lastName: "", age: 22, imageName: "examplePic", occupation: "Student at York University", distance: 54),
+        User(id: 1, firstName: "Ellin", lastName: "", age: 22, imageName: "examplePic", occupation: "Student at York University", distance: 34),
+        User(id: 2, firstName: "Avelin", lastName: "", age: 22, imageName: "examplePic", occupation: "Student at York University", distance: 28),
+        User(id: 3, firstName: "Felicia", lastName: "", age: 22, imageName: "examplePic", occupation: "Student at York University", distance: 43),
+        User(id: 4, firstName: "Cindy", lastName: "", age: 22, imageName: "examplePic", occupation: "Student at York University", distance: 3),
+        User(id: 5, firstName: "Mindy", lastName: "", age: 22, imageName: "examplePic", occupation: "Student at York University", distance: 29),
+        User(id: 6, firstName: "Emma", lastName: "", age: 22, imageName: "examplePic", occupation: "Student at York University", distance: 72),
+        User(id: 7, firstName: "Prisha", lastName: "", age: 22, imageName: "examplePic", occupation: "Student at York University", distance: 45),
+        User(id: 8, firstName: "Aisha", lastName: "", age: 22, imageName: "examplePic", occupation: "Student at York University", distance: 120),
+        User(id: 9, firstName: "Jenner", lastName: "", age: 22, imageName: "examplePic", occupation: "Student at York University", distance: 19)
+    ]
+    
     var body: some View {
         GeometryReader { gr in
             VStack {
@@ -24,76 +38,81 @@ struct SeeWhoLikedMeView: View {
                 Divider()
                 
                 ScrollView(.vertical, showsIndicators: false) {
-                    VStack {
-                        HStack(spacing: 20) {
-                            ZStack {
-                                Image("examplePic").resizable().renderingMode(.original).aspectRatio(contentMode: .fill)
-                                    .frame(width: gr.size.width*0.4, height: gr.size.height*0.26).clipped().cornerRadius(10)
-                                
-                                GeometryReader { geometry in
-                                    VStack(alignment: .leading) {
-                                        Spacer()
-                                        VStack(alignment: .leading, spacing: 0) {
-                                            Text("Sarbina, 23")
-                                                .font(.system(size: 16, weight: .semibold, design: .default))
-                                                .foregroundColor(.white)
-                                            
-                                            
-                                            HStack {
-                                                Image(systemName: "mappin.and.ellipse")
-                                                    .resizable()
-                                                    .aspectRatio(contentMode: .fit)
-                                                    .frame(width: geometry.size.width*0.1)
-                                                    .foregroundColor(.white)
-                                                    .font(Font.title.weight(.semibold))
-                                                
-                                                Text("18km away")
-                                                    .font(.system(size: 16, weight: .semibold, design: .default))
-                                                    .foregroundColor(Color.white)
-                                            }
-                                            
-                                        }
-                                    }.padding()
-                                        .frame(width: geometry.size.width, height: geometry.size.height).offset(x: -geometry.size.width*0.1)
+                    VStack(spacing: 18) {
+                        ForEach(0...4, id: \.self){ index in
+                            HStack(spacing: 20) {
+                                ZStack {
+                                    Image("examplePic").resizable().renderingMode(.original).aspectRatio(contentMode: .fill)
+                                        .frame(width: gr.size.width*0.4, height: gr.size.height*0.26).clipped().cornerRadius(10)
                                     
-                                }
-                                
-                            }.frame(width: gr.size.width*0.4, height: gr.size.height*0.26)
-                            
-                            ZStack {
-                                Image("examplePic").resizable().renderingMode(.original).aspectRatio(contentMode: .fill)
-                                    .frame(width: gr.size.width*0.4, height: gr.size.height*0.26).clipped().cornerRadius(10)
-                                
-                                GeometryReader { geometry in
-                                    VStack(alignment: .leading) {
-                                        Spacer()
-                                        VStack(alignment: .leading, spacing: 0) {
-                                            Text("Sarbina, 23")
-                                                .font(.system(size: 16, weight: .semibold, design: .default))
-                                                .foregroundColor(.white)
-                                            
-                                            
-                                            HStack {
-                                                Image(systemName: "mappin.and.ellipse")
-                                                    .resizable()
-                                                    .aspectRatio(contentMode: .fit)
-                                                    .frame(width: geometry.size.width*0.1)
-                                                    .foregroundColor(.white)
-                                                    .font(Font.title.weight(.semibold))
-                                                
-                                                Text("18km away")
+                                    GeometryReader { geometry in
+                                        VStack(alignment: .leading) {
+                                            Spacer()
+                                            VStack(alignment: .leading, spacing: 0) {
+                                                Text("\(self.users[index].description)")
                                                     .font(.system(size: 16, weight: .semibold, design: .default))
-                                                    .foregroundColor(Color.white)
+                                                    .foregroundColor(.white)
+                                                
+                                                
+                                                HStack {
+                                                    Image(systemName: "mappin.and.ellipse")
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fit)
+                                                        .frame(width: geometry.size.width*0.1)
+                                                        .foregroundColor(.white)
+                                                        .font(Font.title.weight(.semibold))
+                                                    
+                                                    Text("\(self.users[index].distance)km away")
+                                                        .font(.system(size: 16, weight: .semibold, design: .default))
+                                                        .foregroundColor(Color.white)
+                                                }
+                                                
                                             }
-                                            
-                                        }
-                                    }.padding()
-                                        .frame(width: geometry.size.width, height: geometry.size.height).offset(x: -geometry.size.width*0.1)
+                                        }.padding()
+                                            .frame(width: geometry.size.width, height: geometry.size.height).offset(x: -geometry.size.width*0.1)
+                                        
+                                    }
                                     
-                                }
+                                }.frame(width: gr.size.width*0.4, height: gr.size.height*0.26)
                                 
-                            }.frame(width: gr.size.width*0.4, height: gr.size.height*0.26)
+                                ZStack {
+                                    Image("examplePic").resizable().renderingMode(.original).aspectRatio(contentMode: .fill)
+                                        .frame(width: gr.size.width*0.4, height: gr.size.height*0.26).clipped().cornerRadius(10)
+                                    
+                                    GeometryReader { geometry in
+                                        VStack(alignment: .leading) {
+                                            Spacer()
+                                            VStack(alignment: .leading, spacing: 0) {
+                                                Text("\(self.users[index+5].description)")
+                                                    .font(.system(size: 16, weight: .semibold, design: .default))
+                                                    .foregroundColor(.white)
+                                                
+                                                
+                                                HStack {
+                                                    Image(systemName: "mappin.and.ellipse")
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fit)
+                                                        .frame(width: geometry.size.width*0.1)
+                                                        .foregroundColor(.white)
+                                                        .font(Font.title.weight(.semibold))
+                                                    
+                                                    Text("\(self.users[index+5].distance)km away")
+                                                        .font(.system(size: 16, weight: .semibold, design: .default))
+                                                        .foregroundColor(Color.white)
+                                                }
+                                                
+                                            }
+                                        }.padding()
+                                            .frame(width: geometry.size.width, height: geometry.size.height).offset(x: -geometry.size.width*0.1)
+                                        
+                                    }
+                                    
+                                }.frame(width: gr.size.width*0.4, height: gr.size.height*0.26)
+                            }
                         }
+                        
+                        
+                        
                     }
                 }
                 
@@ -102,7 +121,7 @@ struct SeeWhoLikedMeView: View {
                 Spacer()
             }
             
-        }
+        }.padding(.bottom).edgesIgnoringSafeArea(.bottom)
        
     }
 }

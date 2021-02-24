@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct PreviewSwipeCard: View {
-    
     var body: some View {
+        GeometryReader { gr in
             ZStack {
                 Image("examplePic").resizable().renderingMode(.original).aspectRatio(contentMode: .fill)
                     .frame(width: gr.size.width*0.4, height: gr.size.height*0.26).clipped().cornerRadius(10)
@@ -44,6 +44,7 @@ struct PreviewSwipeCard: View {
                 }
                 
             }.frame(width: gr.size.width*0.4, height: gr.size.height*0.26)
+        }//geometry reader
     }
 }
 

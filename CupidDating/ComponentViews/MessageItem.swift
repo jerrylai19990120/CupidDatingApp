@@ -25,7 +25,9 @@ struct MessageItem: View {
                             .font(.system(size: 16, weight: .semibold, design: .rounded))
                         Text("This is the best date I had in a while, I would love to go on another one.").foregroundColor(.gray).font(.system(size: 16, weight: .medium, design: .rounded)).lineLimit(1)
                     }
+                    
                 }.frame(width: gr.size.width)
+                
             }
             
         

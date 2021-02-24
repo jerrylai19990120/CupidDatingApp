@@ -34,6 +34,7 @@
 		92D312AB25E5A7B900EFFE0A /* SendMessageBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D312AA25E5A7B900EFFE0A /* SendMessageBox.swift */; };
 		92D312AD25E5B47400EFFE0A /* PreviewSwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D312AC25E5B47400EFFE0A /* PreviewSwipeCard.swift */; };
 		92D312AF25E5B8B800EFFE0A /* SeeWhoLikedMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D312AE25E5B8B800EFFE0A /* SeeWhoLikedMeView.swift */; };
+		92F42C7D25E5DF0100752723 /* EmptyChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F42C7C25E5DF0100752723 /* EmptyChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		92D312AA25E5A7B900EFFE0A /* SendMessageBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageBox.swift; sourceTree = "<group>"; };
 		92D312AC25E5B47400EFFE0A /* PreviewSwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSwipeCard.swift; sourceTree = "<group>"; };
 		92D312AE25E5B8B800EFFE0A /* SeeWhoLikedMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeWhoLikedMeView.swift; sourceTree = "<group>"; };
+		92F42C7C25E5DF0100752723 /* EmptyChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				92D312A825E5A7A800EFFE0A /* ReceiveMessageBox.swift */,
 				92D312AA25E5A7B900EFFE0A /* SendMessageBox.swift */,
 				92D312AC25E5B47400EFFE0A /* PreviewSwipeCard.swift */,
+				92F42C7C25E5DF0100752723 /* EmptyChatView.swift */,
 			);
 			path = ComponentViews;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				92D312A125E480D100EFFE0A /* EditInfoButton.swift in Sources */,
 				92D3129B25E46BD000EFFE0A /* MessageItem.swift in Sources */,
 				929EF00F25E1C2830015AB71 /* OptionsBar.swift in Sources */,
+				92F42C7D25E5DF0100752723 /* EmptyChatView.swift in Sources */,
 				929EEFF525E187DD0015AB71 /* AppDelegate.swift in Sources */,
 				92D312AB25E5A7B900EFFE0A /* SendMessageBox.swift in Sources */,
 				92D3129725E4663400EFFE0A /* MatchesView.swift in Sources */,
@@ -393,7 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.10;
+				CURRENT_PROJECT_VERSION = 1.0.11;
 				DEVELOPMENT_ASSET_PATHS = "\"CupidDating/Preview Content\"";
 				DEVELOPMENT_TEAM = 8L83CZ8839;
 				ENABLE_PREVIEWS = YES;
@@ -414,7 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.10;
+				CURRENT_PROJECT_VERSION = 1.0.11;
 				DEVELOPMENT_ASSET_PATHS = "\"CupidDating/Preview Content\"";
 				DEVELOPMENT_TEAM = 8L83CZ8839;
 				ENABLE_PREVIEWS = YES;

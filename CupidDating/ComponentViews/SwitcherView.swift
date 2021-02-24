@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SwitcherView: View {
     
-    @State var isOn: Bool = false
+    @Binding var isOn: Bool
     
     var body: some View {
         Toggle(isOn: $isOn) {
@@ -55,6 +55,6 @@ struct CustomToggleStyle: ToggleStyle {
 
 struct SwitcherView_Previews: PreviewProvider {
     static var previews: some View {
-        SwitcherView()
+        SwitcherView(isOn: Binding.constant(false))
     }
 }

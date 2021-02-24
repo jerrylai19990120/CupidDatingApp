@@ -113,7 +113,7 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(user: User(id: 1, firstName: "Sabrina", lastName: "", age: 22, imageName: "examplePic", occupation: "Fashion Designer")) { (_) in
+        CardView(user: User(id: 1, firstName: "Sabrina", lastName: "", age: 22, imageName: "examplePic", occupation: "Fashion Designer", distance: 22)) { (_) in
             
         }.frame(height: 400)
         .padding()
