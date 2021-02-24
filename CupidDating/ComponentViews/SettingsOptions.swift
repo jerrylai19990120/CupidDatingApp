@@ -16,8 +16,40 @@ struct SettingsOptions: View {
         
         List {
             
-            Text("DISCOVERY SETTINGS").foregroundColor(Color(red: 245/255, green: 39/255, blue: 119/255))
+            Section(header: Text("Discovery settings")) {
+                Text("DISCOVERY SETTINGS").foregroundColor(Color(red: 245/255, green: 39/255, blue: 119/255))
+                    .font(.system(size: 18, weight: .semibold, design: .default))
+                Text("DISCOVERY SETTINGS").foregroundColor(Color(red: 245/255, green: 39/255, blue: 119/255))
                 .font(.system(size: 18, weight: .semibold, design: .default))
+
+            }
+            
+            Section(header: Text("Discovery settings")) {
+                Text("DISCOVERY SETTINGS").foregroundColor(Color(red: 245/255, green: 39/255, blue: 119/255))
+                    .font(.system(size: 18, weight: .semibold, design: .default))
+                Text("DISCOVERY SETTINGS").foregroundColor(Color(red: 245/255, green: 39/255, blue: 119/255))
+                .font(.system(size: 18, weight: .semibold, design: .default))
+
+            }
+            
+            
+            Section(header: Text("Discovery settings")) {
+                Text("DISCOVERY SETTINGS").foregroundColor(Color(red: 245/255, green: 39/255, blue: 119/255))
+                    .font(.system(size: 18, weight: .semibold, design: .default))
+                Text("DISCOVERY SETTINGS").foregroundColor(Color(red: 245/255, green: 39/255, blue: 119/255))
+                .font(.system(size: 18, weight: .semibold, design: .default))
+
+            }
+            
+            Section(header: Text("Discovery settings")) {
+                Text("DISCOVERY SETTINGS").foregroundColor(Color(red: 245/255, green: 39/255, blue: 119/255))
+                    .font(.system(size: 18, weight: .semibold, design: .default))
+                Text("DISCOVERY SETTINGS").foregroundColor(Color(red: 245/255, green: 39/255, blue: 119/255))
+                .font(.system(size: 18, weight: .semibold, design: .default))
+
+            }
+            
+            
         }.listStyle(GroupedListStyle())
 
     }
