@@ -35,6 +35,9 @@
 		92D312AD25E5B47400EFFE0A /* PreviewSwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D312AC25E5B47400EFFE0A /* PreviewSwipeCard.swift */; };
 		92D312AF25E5B8B800EFFE0A /* SeeWhoLikedMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D312AE25E5B8B800EFFE0A /* SeeWhoLikedMeView.swift */; };
 		92F42C7D25E5DF0100752723 /* EmptyChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F42C7C25E5DF0100752723 /* EmptyChatView.swift */; };
+		92F42C7F25E6B23600752723 /* EditInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F42C7E25E6B23600752723 /* EditInfoView.swift */; };
+		92F42C8125E6B29F00752723 /* PictureGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F42C8025E6B29F00752723 /* PictureGrid.swift */; };
+		92F42C8325E6B5BE00752723 /* PicturePlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F42C8225E6B5BE00752723 /* PicturePlaceHolder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,9 @@
 		92D312AC25E5B47400EFFE0A /* PreviewSwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSwipeCard.swift; sourceTree = "<group>"; };
 		92D312AE25E5B8B800EFFE0A /* SeeWhoLikedMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeWhoLikedMeView.swift; sourceTree = "<group>"; };
 		92F42C7C25E5DF0100752723 /* EmptyChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyChatView.swift; sourceTree = "<group>"; };
+		92F42C7E25E6B23600752723 /* EditInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoView.swift; sourceTree = "<group>"; };
+		92F42C8025E6B29F00752723 /* PictureGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureGrid.swift; sourceTree = "<group>"; };
+		92F42C8225E6B5BE00752723 /* PicturePlaceHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturePlaceHolder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,7 @@
 				92D3129C25E47A0C00EFFE0A /* ProfileView.swift */,
 				92D312A625E5941400EFFE0A /* ChatView.swift */,
 				92D312AE25E5B8B800EFFE0A /* SeeWhoLikedMeView.swift */,
+				92F42C7E25E6B23600752723 /* EditInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,6 +160,8 @@
 				92D312AA25E5A7B900EFFE0A /* SendMessageBox.swift */,
 				92D312AC25E5B47400EFFE0A /* PreviewSwipeCard.swift */,
 				92F42C7C25E5DF0100752723 /* EmptyChatView.swift */,
+				92F42C8025E6B29F00752723 /* PictureGrid.swift */,
+				92F42C8225E6B5BE00752723 /* PicturePlaceHolder.swift */,
 			);
 			path = ComponentViews;
 			sourceTree = "<group>";
@@ -242,9 +251,11 @@
 				92D312A125E480D100EFFE0A /* EditInfoButton.swift in Sources */,
 				92D3129B25E46BD000EFFE0A /* MessageItem.swift in Sources */,
 				929EF00F25E1C2830015AB71 /* OptionsBar.swift in Sources */,
+				92F42C8325E6B5BE00752723 /* PicturePlaceHolder.swift in Sources */,
 				92F42C7D25E5DF0100752723 /* EmptyChatView.swift in Sources */,
 				929EEFF525E187DD0015AB71 /* AppDelegate.swift in Sources */,
 				92D312AB25E5A7B900EFFE0A /* SendMessageBox.swift in Sources */,
+				92F42C8125E6B29F00752723 /* PictureGrid.swift in Sources */,
 				92D3129725E4663400EFFE0A /* MatchesView.swift in Sources */,
 				929EF00D25E1B52D0015AB71 /* InterestTag.swift in Sources */,
 				92D3129D25E47A0C00EFFE0A /* ProfileView.swift in Sources */,
@@ -260,6 +271,7 @@
 				929EF00925E1B13A0015AB71 /* DetailView.swift in Sources */,
 				92D312AD25E5B47400EFFE0A /* PreviewSwipeCard.swift in Sources */,
 				929EEFF725E187DD0015AB71 /* SceneDelegate.swift in Sources */,
+				92F42C7F25E6B23600752723 /* EditInfoView.swift in Sources */,
 				929EEFF925E187DD0015AB71 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

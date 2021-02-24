@@ -39,7 +39,7 @@ struct ChatView: View {
                                 .cornerRadius(54)
                             
                             Text("Sabrina")
-                                .foregroundColor(.gray)
+                                .foregroundColor(.black)
                                 .font(.system(size: 16, weight: .semibold, design: .rounded))
                         }
                         Spacer()
