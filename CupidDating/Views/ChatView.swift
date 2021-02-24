@@ -50,16 +50,21 @@ struct ChatView: View {
                             .font(Font.title.bold())
                     }.padding()
                     
-                    ScrollView(.vertical, showsIndicators: false) {
-                        VStack(spacing: gr.size.height*0.02) {
-                            ReceiveMessageBox()
-                            ReceiveMessageBox()
-                            SendMessageBox()
-                            SendMessageBox()
-                            ReceiveMessageBox()
-                            SendMessageBox()
-                        }.frame(width: gr.size.width)
+                    if self.allMessages.count == 0 {
+                        EmptyChatView()
+                    } else {
+                        ScrollView(.vertical, showsIndicators: false) {
+                            VStack(spacing: gr.size.height*0.02) {
+                                ReceiveMessageBox()
+                                ReceiveMessageBox()
+                                SendMessageBox()
+                                SendMessageBox()
+                                ReceiveMessageBox()
+                                SendMessageBox()
+                            }.frame(width: gr.size.width)
+                        }
                     }
+                    
                     
                     HStack(spacing: 0) {
                         TextField("Type a message", text: self.$message).textFieldStyle(PlainTextFieldStyle())
