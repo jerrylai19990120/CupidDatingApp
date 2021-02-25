@@ -12,7 +12,9 @@ struct SettingsOptions: View {
     
     var gr: GeometryProxy
     
-    @State var isOn: Bool = true
+    @State var isOnMen: Bool = true
+    
+    @State var isOnWomen: Bool = false
     
     @State var isOnCupid: Bool = true
     
@@ -86,16 +88,17 @@ struct SettingsOptions: View {
             }
             
             Section(header: Text("Show Me:").font(.system(size: 13, weight: .semibold, design: .default))) {
-                Toggle(isOn: self.$isOn) {
+                Toggle(isOn: self.$isOnMen) {
                     Text("Men")
                     .font(.system(size: 20, weight: .regular, design: .default))
                     }.toggleStyle(RedToggleStyle(title: "Men"))
                 .padding([.top, .bottom])
                 
-                Toggle(isOn: self.$isOn) {
+                Toggle(isOn: self.$isOnWomen) {
                     Text("Women")
                     .font(.system(size: 20, weight: .regular, design: .default))
                     }.padding([.top, .bottom]).toggleStyle(RedToggleStyle(title: "Women"))
+                    
             }
             
             Section(header: Text("")) {
@@ -158,6 +161,36 @@ struct SettingsOptions: View {
                 }
             }
             
+            HStack {
+                Spacer()
+                VStack {
+                    Image("logoToggle").resizable().renderingMode(.original).aspectRatio(contentMode: .fit)
+                        .frame(width: gr.size.width*0.16, height: gr.size.width*0.16)
+                    Text("Version 1.1.0")
+                        .font(.system(size: 20, weight: .regular, design: .default)).padding()
+                }
+                Spacer()
+            }
+            
+            
+            Section(header: Text("")) {
+                NavigationLink(destination: WelcomeView().navigationBarTitle("").navigationBarHidden(true)) {
+                        HStack {
+                            Spacer()
+                            Text("Delete Account")
+                                .font(.system(size: 20, weight: .regular, design: .default)).padding()
+                            Spacer()
+                        }
+                    }.opacity(0).background(
+                        HStack {
+                            Spacer()
+                            Text("Delete Account")
+                                .font(.system(size: 20, weight: .regular, design: .default)).padding()
+                            Spacer()
+                        }
+                )
+                
+            }.listRowBackground(Color(red: 217/255, green: 217/255, blue: 217/255))
             
             
         }.listStyle(GroupedListStyle())
@@ -203,7 +236,9 @@ struct RedToggleStyle: ToggleStyle {
                         .animation(Animation.linear(duration: 0.1))
                         
                 ).cornerRadius(18)
-                .onTapGesture { configuration.isOn.toggle() }
+                .onTapGesture { configuration.isOn.toggle()
+                    
+            }
         }
     }
 }
