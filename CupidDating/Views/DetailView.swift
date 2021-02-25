@@ -17,9 +17,22 @@ struct DetailView: View {
                     VStack(alignment: .leading) {
                         
                         ZStack(alignment: .leading) {
-                            Image("examplePic").resizable().clipped()
-                                .frame(maxHeight: 300)
-                                .frame(width: gr.size.width).aspectRatio(contentMode: .fit)
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack {
+                                    Image("examplePic").resizable().clipped()
+                                        .frame(maxHeight: 300)
+                                        .frame(width: gr.size.width).aspectRatio(contentMode: .fill)
+                                    
+                                    Image("examplePic2").resizable().clipped()
+                                    .frame(maxHeight: 300)
+                                    .frame(width: gr.size.width).aspectRatio(contentMode: .fill)
+                                    
+                                    Image("examplePic3").resizable().clipped()
+                                    .frame(maxHeight: 300)
+                                    .frame(width: gr.size.width).aspectRatio(contentMode: .fill)
+                                }
+                            }
+                            
                             
                             
                         }
@@ -72,11 +85,9 @@ struct DetailView: View {
                             
                             HStack {
                                 InterestTag(title: "Travel")
-                                InterestTag(title: "Coding")
                                 InterestTag(title: "Cooking")
                                 InterestTag(title: "Binge Drinking")
-                                InterestTag(title: "Long Walk")
-                                InterestTag(title: "Gym")
+                                
                                 
                             }.padding()
                             .frame(width: gr.size.width)
